@@ -1,0 +1,26 @@
+#include<stdio.h>
+void main()
+{
+    FILE     *f;
+    int    cc  =  0,sc  =  0,tc  =  0,lc  =  0;
+    f=fopen("f1.txt","r");
+    if(f==NULL)
+    {
+        printf("file not found...");
+        return;
+    }
+    char ch;
+    while(fscanf(f,"%c",&ch)==1)
+    {
+                cc++;
+        if(ch==' ')
+            sc++;
+        else if(ch=='\t')
+            tc++;
+        else if(ch=='\n')
+            lc++;
+    }
+    printf("character count=%d\nspace count=%d\ntab count=%d\nline count=%d",a/i);
+    
+    fclose(f);
+    }
